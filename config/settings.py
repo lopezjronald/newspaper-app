@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 from environs import Env
+import django_heroku
 
 env = Env()
 env.read_env()
@@ -141,3 +142,5 @@ EMAIL_HOST_USER = 'apikey'
 EMAIL_HOST_PASSWORD = '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'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+django_heroku.settings(locals())
